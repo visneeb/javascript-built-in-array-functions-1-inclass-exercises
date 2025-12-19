@@ -10,6 +10,13 @@
 
 // Start coding here
 
+function addBonusForSelectedDepartment(employeeInfo, bonus, department) {
+  return employeeInfo
+    .filter((emp) => emp.department === department)
+    .map((emp) => emp.salary + bonus)
+    .reduce((sum, salary) => (sum += salary), 0);
+}
+
 const employeeInfo = [
   {
     firstname: "Alice",
